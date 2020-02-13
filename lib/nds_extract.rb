@@ -7,9 +7,9 @@ def gross_for_director(director_data)
   nds = directors_database
   second_index = 0 #used to loop thru directors movies
   total_gross = 0
-  while nds[director_data][:movies].length > second_index do
+  while director_data[:movies].length > second_index do
     #totals the current directors gross
-    total_gross += nds[director_data][:movies][second_index][:worldwide_gross]
+    total_gross += director_data[:movies][second_index][:worldwide_gross]
     second_index += 1
   end
   total_gross
